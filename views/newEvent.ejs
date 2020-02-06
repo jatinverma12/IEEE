@@ -1,0 +1,36 @@
+<%- include ('partials/header') %>
+
+<form  action='/newevent' method='POST'>
+    <div class="form-group" style="margin-left:3rem; font-family: 'Noto Sans', sans-serif; width:60rem;">
+       <h3>Subject:</h3>
+      <br>
+      <input class="form-control" type="text" name="subject" required>
+    </div>
+    <div class="form-group"style="width:60rem; margin-left:3rem; font-family: 'Noto Sans', sans-serif;">
+     <h3> Date:</h3>
+      <br>
+      <input class="form-control" type="date" name="event_date" required>
+    </div>
+    <div class="form-group"style="width:60rem; margin-left:3rem; font-family: 'Noto Sans', sans-serif;">
+      <h3>Venue:</h3>
+      <br>
+      <input class="form-control" style="font-family: 'Noto Sans', sans-serif;" type="text" name="venue">
+    </div>
+    <div class="form-group" style="width:60rem; margin-left:3rem; font-family: 'Noto Sans', sans-serif;">
+      <h3>Time:</h3>
+      <br>
+      <input class="form-control"  type="time" name="time">
+    </div>
+    <div class="form-group" style="width:60rem; margin-left:3rem; font-family: 'Noto Sans', sans-serif;">
+      <h3>Description:</h3>
+      
+      <br>
+      <textarea  rows="10" cols="65" name="description" wrap="hard">
+      </textarea>
+    </div>
+    <button style="margin-left: 3rem;" class="btn btn-lg btn-success">
+      Submit
+    </button> 
+  </form>
+
+  <%- include ('partials/footer') %>

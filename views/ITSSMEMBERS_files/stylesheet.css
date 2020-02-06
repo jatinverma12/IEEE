@@ -1,0 +1,143 @@
+body {
+ /*background: url('bg3.jpg');*/
+ background-size: cover;
+ margin-left: 0;
+ font-family: sans-serif,montserrat;
+
+  /*background-image:url(bgimage.jpg);*/
+
+}
+h1{font-weight: 400;color: #fff;font-size: 3.5em}
+h4{font-weight: 400;color: #aaa;font-size: 2em}
+h2{text-transform: uppercase; font-size: 1.5em}
+
+
+ .column {
+  float: left;
+  width: 33.3%;
+  margin-top:  1em;
+  padding: 10px 3%;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	border:1px solid #aaa;
+	box-shadow: 0 0 10px #666a;
+	border-radius: 1em;
+	padding: 50px;
+
+}
+.card:hover{
+	transform: scale(1.1);
+}
+
+/* Some left and right padding inside the container */
+.container {
+  padding: 0 10px;
+}
+.container a{width:100%;}
+/* Clear floats */
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+@media(max-width: 786px){
+	.card-body h2 ,.card-body a{
+	font-size: 1.3em;
+	font-weight: 500;
+	color: #000
+	}
+
+	.card p{
+	font-weight: 600;
+	font-size: 1.0em;
+	}
+	h1{
+	font-weight: 800;color: #fff;font-size: 3em
+	}
+
+	.card-body{
+	padding: 0;
+	}
+	.card .col-4,.card.col-8{
+		padding: 0
+	}
+
+}
+.shadows{
+	box-shadow: 0px 0px 5px #333;
+}
+.card-text{
+	font-weight: 600;
+	font-size:18px
+}
+.card-body .btn{
+	font-weight: 600;
+	font-size: 18px
+}
+.card-img-top{
+	padding: 5px;
+	max-height: 20rem;
+	object-fit: cover;
+	border-radius: 10px;
+}
+.round-20{
+	border-radius: 10px;
+}
+
+.about{
+	font-size: 1.2em;
+	font-weight: 400;
+	padding: 1em;
+}
+.about h1{
+	color: #000;
+	font-size: 2.5em;
+}
+.about h2{
+	color: #000;
+	font-size: 1.66em;
+	font-weight: 600;
+}
+.box-outline999{
+	/*border: 1px solid ;*/
+	border-radius: 0.3em;
+	border-left-style: none;
+}
+.filler{
+	/*background-color: #f3f;*/
+}
+.fluidx img{
+	height: 200px
+}

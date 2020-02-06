@@ -1,0 +1,20 @@
+<%- include ('partials/header') %>
+
+<% for(let event of past){%>
+    
+        <div style=" text-shadow: aqua; margin:0 6rem 0 6rem; font-family: 'Noto Sans', sans-serif;">
+            <h1 style="font-family: 'Noto Sans', sans-serif; text-align:center; font-size: 6rem;"><%=event.subject%></h1>
+            <hr style="box-shadow: -0.2rem -0.2rem 0.1rem 0.1rem ; width:40%">
+        <br>
+        <h4 style="font-family: 'Noto Sans';text-align:left;  font-weight: 500; font-size: 2rem; "><span><h3>Date:</h3></span> <%=event.date%> </h4>
+        <h4 style="font-family: 'Noto Sans';text-align:left;  font-weight: 500; font-size: 2rem;"><span><h3>Venue:</h3></span><%=event.venue%> </h4>
+        <h4 style="font-family: 'Noto Sans';text-align:left;  font-weight: 500; font-size: 2rem;"><span><h3>Time:</h3></span><%=event.time%> </h4>
+        <h4 style="font-family: 'Noto Sans';text-align:left;  font-weight: 500; font-size: 2rem;"><span><h3>Description:</h3></span><%=event.description%> </h4>
+        
+        </div>
+    
+    
+
+<%}%>
+
+<%- include ('partials/footer') %>

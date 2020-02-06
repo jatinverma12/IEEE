@@ -1,0 +1,90 @@
+<script>
+
+    const button=document.querySelector('.btn');
+    button.addEventListener('mouseover',function(){
+      this.style.background="#212121";
+    });
+
+    button.addEventListener('mouseout',function(){
+      this.style.background="#4CAF50";
+    })
+    const change=function(link){
+         link.style.color="black";
+         link.style.background="grey";
+         link.style.transition='0.5s';
+     }
+     const navbar_link=document.querySelectorAll('.navbar-inverse .navbar-nav>li>a ');
+     for(let link of navbar_link){
+
+      link.addEventListener('onclick',function(){
+        console.log(5);
+           this.classList.add("active");
+           
+         })
+
+         link.addEventListener('mouseover',function(){
+             change(this);
+         });
+
+         link.addEventListener('mouseout',function(){
+             this.style.background="#212121";
+             this.style.color="white";
+             
+         });
+
+         
+     }
+
+     const cards=document.querySelectorAll('img');
+     
+     for(var i=1;i<=cards.length;i++)
+     {
+
+      cards[i].addEventListener('mouseover',function(){
+        this.style.transitionDuration="2s";
+         this.style.height="30rem";
+         this.style.width="30rem";
+         
+         this.style.border="solid .5rem black";
+       });
+       
+       cards[i].addEventListener('mouseout',function(){
+        this.style.transitionDuration="1.5s";
+         this.style.height="220px";
+         this.style.width="173px";
+         
+         this.style.border="solid .1rem black";
+       });
+
+       
+       
+       
+    
+     
+     
+    
+     
+     
+     }
+      
+ 
+ </script>  
+
+
+   
+   
+
+   <script>
+     src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+   </script>
+   
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      </body>
+</html>
+
+
+
+
+
+

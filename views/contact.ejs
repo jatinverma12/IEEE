@@ -1,0 +1,40 @@
+<%- include ('partials/header') %>
+  <div class="text-center">
+    <h2 style="font-family: 'Noto Sans', sans-serif;">Contact Us</h2>
+  </div>
+
+  <div class="row">
+    <div style="width:40% ; margin-left: 12rem;">
+
+    
+      <form  action='/contact' method='POST'>
+        <div class="form-group">
+          Your Name:
+          <br>
+          <input class="form-control" type="text" name="name" required>
+        </div>
+        <div class="form-group">
+          Email:
+          <br>
+          <input class="form-control" type="email" name="email" placeholder="username@someone.com" required>
+        </div>
+        <div class="form-group">
+          Subject:
+          <br>
+          <input class="form-control" type="text" name="sub">
+        </div>
+        <div class="form-group">
+          Message:
+          
+          <br>
+          <textarea style="border-radius: 1rem;" rows="10" cols="65" name="message" wrap="hard">
+          </textarea>
+        </div>
+        <button class="btn btn-lg btn-success">
+          Submit
+        </button> 
+      </form>
+    </div>
+  </div>
+
+<%- include ('partials/footer') %>
