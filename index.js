@@ -218,6 +218,6 @@ app.get('/pastevents',async (req,res)=>{
 
 
 })
-app.listen(5500,function(){
+app.listen(process.env.PORT||3000,function(){
     console.log("listening");
 });
