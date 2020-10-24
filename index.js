@@ -51,7 +51,8 @@ class UserRepository{
         
         
         const records=await this.getAll();
-        const filterRecords=records.filter(record=>record.event_date!==e.date)
+        const filterRecords=records.filter(record=>record.description!==e.description)
+        console.log(filterRecords);
 
         //.filter method returns the record for which inner condition is true
     
@@ -118,7 +119,7 @@ const dates = {
 };
 
 app.set('view-engine','ejs');
-app.get('/home',(req,res)=>{
+app.get('/',(req,res)=>{
     res.render('home.ejs');
 });
 
@@ -130,7 +131,7 @@ app.get('/contact',(req,res)=>{
 app.post('/contact',async (req,res)=>{
     
     await messages.update(req.body);
-    res.redirect('/home');
+    res.redirect('/');
     
     //records.push(record);
     //await fs.promises.appendFile('messages.json',JSON.stringify(record,null,2));
@@ -169,7 +170,10 @@ app.get('/comittee',(req,res)=>{
 app.get('/upevents',async (req,res)=>{
     
     const eventObject=await upevents.getAll();
-    res.render('upevents.ejs',{up:eventObject});
+    if(eventObject.length===0)
+        res.render('EventNotFound.ejs');
+    else
+        res.render('upevents.ejs',{up:eventObject});
     
 })
 
@@ -207,6 +211,9 @@ app.get('/pastevents',async (req,res)=>{
       }
     }
     const q=await pastevents.getAll();  
+    if(q.length===0)
+        res.render('EventNotFound.ejs');
+    else
     res.render('pastevents.ejs',{past:q});
 
 
